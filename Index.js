@@ -175,7 +175,7 @@ function generateHTML() {
                                 <p>${teamArr[i].title}</p>
                             </div>
                             <div class="card-action">
-                                <p class="white-text">Employee ID: ${teamArr[i].id}</p>
+                                <p class="white-text">ID: ${teamArr[i].id}</p>
                                 <p class="white-text">Email: <a href="mailto:${teamArr[i].email}">${teamArr[i].email}</a></p>
 `
         if (teamArr[i].officeNumber) {
