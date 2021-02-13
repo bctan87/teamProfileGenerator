@@ -15,6 +15,10 @@ function startPrompt() {
 
         },
         {
+            name: "id",
+            message: "Enter manager's ID"
+        },
+        {
             name: "email",
             message: "Enter manager's email address"
         },
@@ -28,7 +32,7 @@ function startPrompt() {
 
         .then(function (data) {
             const name = data.name
-            const id = 1
+            const id = data.id
             const email = data.email
             const officeNumber = data.officeNumber
             const teamMember = new Manager(name, id, email, officeNumber)
@@ -72,18 +76,22 @@ function createEngineer() {
             message: "Enter engineer's name" 
         },
         {
+            name: "id",
+            message: "Enter engineer's ID"
+        },
+        {
             name: "email",
             message: "Enter engineer's email address"
         },
         {
             name: "github",
-            message: "Enter engineer's Github profile?"
+            message: "Enter engineer's Github profile"
         }
     ])
 
         .then(function (data) {
             const name = data.name
-            const id = teamArr.length + 1
+            const id = data.id
             const email = data.email
             const github = data.github
             const teamMember = new Engineer(name, id, email, github)
@@ -101,6 +109,10 @@ function createIntern() {
 
         },
         {
+            name: "id",
+            message: "Enter intern's ID"
+        },
+        {
             name: "email",
             message: "Enter intern's email address"
 
@@ -113,7 +125,7 @@ function createIntern() {
 
         .then(function (data) {
             const name = data.name
-            const id = teamArr.length + 1
+            const id = data.id
             const email = data.email
             const school = data.school
             const teamMember = new Intern(name, id, email, school)
